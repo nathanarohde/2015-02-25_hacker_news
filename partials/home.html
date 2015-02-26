@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h2> Welcome to Hacker News! </h2>
+    <div class='col-md-8'>
+      <ul>
+        <li ng-repeat='item in webLinks'>
+          <a href={{item.url}}>{{item.name}} </a>
+        </li>
+      </ul>
+    </div>
+    <div class='col-md-4'>
+        <form ng-submit= 'addWebLink()' class='form-inline' role='form'>
+          <div class='form-group'>
+            <h3> Website Name </h3>
+            <input type='text' ng-model='webLinkName' class='form-control'>
+            <h3> Website URL </h3>
+            <input type='text' ng-model='webLinkUrl' class='form-control'>
+          </div>
+          <button type='submit' class='btn btn-default'>Submit</button>
+        </form>
+    </div>
+  </body>
+</html>
