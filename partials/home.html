@@ -5,17 +5,21 @@
   </head>
   <body>
     <h2> Welcome to Hacker News! </h2>
+
     <div class='col-md-8'>
       <ul>
-        <li ng-repeat='item in webLinks'>
-          <a href={{item.url}}>{{item.name}} </a>
+        <li ng-repeat="item in webLinks | orderBy:'vote':true">
+          <p><a href={{item.url}}>{{item.name}}</a>{{item.vote}}</p>
+        <button type="click" ng-click= 'upVote(item)' class= "btn btn-default" class="upvote">Upvote</button>
+        <button type-"click" ng-click='downVote(item)' class="btn btn-default" class="downvote">Downvote</button>
         </li>
       </ul>
+
     </div>
     <div class='col-md-4'>
         <form ng-submit= 'addWebLink()' class='form-inline' role='form'>
           <div class='form-group'>
-            <h3> Website Name </h3>
+            <h3> Post Title </h3>
             <input type='text' ng-model='webLinkName' class='form-control'>
             <h3> Website URL </h3>
             <input type='text' ng-model='webLinkUrl' class='form-control'>
