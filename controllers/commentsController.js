@@ -1,5 +1,6 @@
 hackerNewsList.controller('CommentsCtrl', function CommentsCtrl($scope, $stateParams, webLinksFactory, UtilitiesFactory){
   $scope.webLinks = UtilitiesFactory.findById(webLinksFactory.webLinks, $stateParams.webLinkId)
+  $scope.$parentScope = $scope;
 
   $scope.addComments = function() {
     $scope.webLinks.comments.push({name: $scope.commentName, post: $scope.commentPost});
@@ -7,4 +8,6 @@ hackerNewsList.controller('CommentsCtrl', function CommentsCtrl($scope, $statePa
     $scope.commentName = null;
     $scope.post = null;
   };
+
+  $scope.commentName = null;
 });

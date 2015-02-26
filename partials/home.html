@@ -9,7 +9,7 @@
     <div class='col-md-8'>
       <ul>
         <li ng-repeat="item in webLinks | orderBy:'vote':true">
-          <p><a href={{item.url}}>{{item.name}}</a>{{item.vote}}</p>
+          <p><a href={{item.url}} target=_blank>{{item.name}}</a>{{item.vote}}</p>
           <p><a ui-sref ='comments({webLinkId: item.id})'>{{item.numberOfComments}} &nbsp comments</a></p>
         <button type="click" ng-click= 'webLinksFactory.upVote(item)' class= "btn btn-default" class="upvote">Upvote</button>
         <button type-"click" ng-click='webLinksFactory.downVote(item)' class="btn btn-default" class="downvote">Downvote</button>
