@@ -8,7 +8,7 @@ var hackerNewsList = angular.module('hackerNewsList',['ui.router']);
     });
 
   $stateProvider.state('comments', {
-      url:"/comments",
+      url:"/:webLinkId",
       templateUrl: "partials/comments.html",
       controller: 'CommentsCtrl'
     });

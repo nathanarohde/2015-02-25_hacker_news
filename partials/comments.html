@@ -5,15 +5,15 @@
   </head>
   <body>
 
-    <div class='col-md-8'>
+    <div class='col-md-6'>
       <ul>
-        <li ng-repeat="item in comments">
+        <li ng-repeat="item in webLinks.comments">
           <p>{{item.name}} {{item.post}}</p>
         </li>
       </ul>
 
-    <div class='col-md-4'>
-      <form ng-submit= 'addComments()' class='form-inline' role='form'>
+    <div class='col-md-6'>
+      <form ng-submit= 'addComments(item)' class='form-inline' role='form'>
         <div class='form-group'>
           <h3>Name: </h3>
           <input type='text' ng-model='commentName' class='form-control'>
