@@ -18,14 +18,14 @@
 
     </div>
     <div class='col-md-4'>
-        <form ng-submit= 'webLinksFactory.addWebLink()' class='form-inline' role='form'>
+        <form ng-submit= 'webLinksFactory.addWebLink()'  class='form-inline' role='form'>
           <div class='form-group'>
             <h3> Post Title </h3>
             <input type='text' ng-model='webLinksFactory.webLinkName' class='form-control'>
             <h3> Website URL </h3>
             <input type='text' ng-model='webLinksFactory.webLinkUrl' class='form-control'>
           </div>
-          <button type='submit' class='btn btn-default'>Submit</button>
+          <button type='submit' ng-click='webLinksFactory.decrementVote()' class='btn btn-default'>Submit</button>
         </form>
     </div>
   </body>

@@ -16,5 +16,11 @@ hackerNewsList.factory('webLinksFactory', function webLinksFactory(){
     webLink.vote -=1;
   };
 
+  factory.decrementVote = function(){
+    factory.webLinks.forEach(function(webLink) {
+    webLink.vote  -= 1;
+    });
+  };
+
   return factory;
 });
